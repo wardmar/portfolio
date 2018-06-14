@@ -1,0 +1,69 @@
+@font-face 
+{
+    font-family: "Arima";
+    src: url("font/ArimaMadurai-Regular.otf");
+    scr: url("font/ArimaMadurai-Bold.otf") ,
+    url("font/ArimaMadurai-Light.otf") ,
+    url("font/ArimaMadurai-Medium.otf") ;
+
+    font-family: "Archery";
+    src: url("font/SF_Archery_Black.ttf");
+    scr: url("font/SF_Archery_Black_Oblique.ttf") ;     
+}  
+
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background-color: rgb(143, 143, 143);
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.portco
+{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoinit
+{
+    height: 100px;
+    margin: 5px 0px 0px 5px;
+}
+
+.connect
+{
+
+}
+
+.menu
+{
+    height: 50px;
+    background-color: rgb(129, 129, 129)
+}
+
+#titre
+{
+    font-family: "Archery";
+    font-size: 5em
+}
+
+.deroul
+{
+    height: 50px;
+}
+
+#boutder
+{
+    display: flex;
+    justify-content: center;
+}
