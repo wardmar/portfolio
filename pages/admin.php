@@ -9,8 +9,12 @@
     <title>Administration</title>
 </head>
 <body>
+    <?php
+        include ('secur.php');
+        include ('connect.php');
+    ?>
     <div id="formu">
-        <form action="" method="post">
+        <form action="admin.php" method="post">
             <label for="titre">Projet</label>
             <input type="text" name="titre" id="titre" placeholder="Le nom du projet">
             <label for="techno">Techno</label>
