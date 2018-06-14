@@ -1,4 +1,5 @@
-@font-face {
+@font-face 
+{
     font-family: "Arima";
     src: url("font/ArimaMadurai-Regular.otf");
     scr: url("font/ArimaMadurai-Bold.otf") ,
@@ -7,8 +8,7 @@
 
     font-family: "Archery";
     src: url("font/SF_Archery_Black.ttf");
-    scr: url("font/SF_Archery_Black_Oblique.ttf") ;
-        
+    scr: url("font/SF_Archery_Black_Oblique.ttf") ;     
 }  
 
 body 
