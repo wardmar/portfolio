@@ -19,22 +19,36 @@ body
 
 header
 {
-    background-color: grey;
-    height: 100px;
+    background-color: rgb(143, 143, 143);
+    height: 110px;
     display: flex;
     justify-content: space-between;
-    align-items: center
+   
+}
+
+.portco
+{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .logoinit
 {
     height: 100px;
+    margin: 5px 0px 0px 5px;
+}
+
+.connect
+{
+
 }
 
 .menu
 {
     height: 50px;
-    background-color: grey
+    background-color: rgb(129, 129, 129)
 }
 
 #titre
@@ -43,12 +57,13 @@ header
     font-size: 5em
 }
 
-.connect
-{
-    margin-right: 10%;
-}
-
 .deroul
 {
     height: 50px;
+}
+
+#boutder
+{
+    display: flex;
+    justify-content: center;
 }
