@@ -10,8 +10,8 @@
 </head>
 <body>
     <?php
-        include ('secur.php');
-        include ('connect.php');
+        include ('morceau/secur.php');
+        include ('morceau/connect.php');
     ?>
     <div id="formu">
         <form action="admin.php" method="post">
@@ -23,14 +23,20 @@
             <textarea name="description" id="description" cols="2" rows="4" placeholder="Description du projet"></textarea>
             <label for="dossier">Dossier .zip</label>
             <input type="file" name="dossier" id="dossier">
-            <label for="image">Image du projet</label>
+            <label for="image">Image du projet *</label>
             <input type="text" name="image" id="image" placeholder="Lien vers l'image">
-            <label for="mockup">Mockup du projet</label>
+            <label for="mockup">Mockup du projet *</label>
             <input type="text" name="mockup" id="mockup" placeholder="Lien vers le mockup">
             <label for="pagePrin">Page principal du projet</label>
             <input type="text" name="pagePrin" id="pagePrin" placeholder="Lien vers la page principal">
+            <p id="warning" >*les images et Mockups doivent ètre placés à la racine du dossier compressé</p>
             <input type="submit" value="Submit">
         </form>
     </div>
+    <?php
+        
+
+    ?>
+
 </body>
 </html>

@@ -93,7 +93,8 @@ input[type=text]:focus , textarea:focus
     box-sizing: border-box;
 }
 
-label
+#warning
 {
-      
+    font-size: 0.8em;
+    color: rgb(160, 0, 0)
 }
