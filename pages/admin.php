@@ -11,7 +11,8 @@
 <body>
     <?php
         include ('morceau/secur.php');
-        include ('morceau/connect.php');
+        require_once ('morceau/bdd.php');
+        
     ?>
     <div id="formu">
         <form action="admin.php" method="post">
@@ -30,12 +31,16 @@
             <label for="pagePrin">Page principal du projet</label>
             <input type="text" name="pagePrin" id="pagePrin" placeholder="Lien vers la page principal">
             <p id="warning" >*les images et Mockups doivent ètre placés à la racine du dossier compressé</p>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" name="submit">
         </form>
     </div>
     <?php
-        
 
+    // connect and send to the bdd
+        // $connect = $insert->connect();
+        // $info = $insert->info();
+        // $inserinfo = $insert->insert();
+        
     ?>
 
 </body>
