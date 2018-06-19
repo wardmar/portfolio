@@ -98,3 +98,8 @@ input[type=text]:focus , textarea:focus
     font-size: 0.8em;
     color: rgb(160, 0, 0)
 }
+
+.error
+{
+    color: red;
+}
