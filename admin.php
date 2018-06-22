@@ -38,12 +38,13 @@
     <?php
 
     //connect and send to the bdd
-        // $connect = $insert->connect();
-        // $info = $insert->info();
-        // $inserinfo = $insert->insert();
+         $connect = $insert->connect();
+         $info = $insert->info();
+         $inserinfo = $insert->insert();
     ?>
         <div class="error">
         <?php
+        //execute the saving and extracting function return message 
         $filesaving = $savezip->fileSaving();
         $fileextract = $savezip->extract();
         ?>
