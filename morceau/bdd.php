@@ -3,7 +3,7 @@
 
 class bdd
 {
-    private $_mysqli;
+    public $_mysqli;
     public $_content;
     public function connect()
     {
@@ -39,22 +39,23 @@ class bdd
     }
     public function extract()
     {
+        $html ='';
         $reponse = $this->_mysqli->query('SELECT * FROM projet');
-
-        while ($donnees = $reponse->fetch()) {
-            $html = '<div class="container">'
-                . '<img src="projet/' . $donnees['dossier'] . '/' . $donnees['mockup'] . '" alt="Avatar" class="image">'
+        foreach ($reponse as $donnee) {
+            $html .= '<div class="container">'
+                . '<img src="projet/' . $donnee['dossier'] . '/' . $donnee['mockup'] . '" alt="Avatar" class="image">'
                 . '<a href="">'
                 . '<div class="overlay">'
-                . '<div class="text"><p>' . $donnees['projet'] . '</p>'
-                . '<p>' . $donnees['descript'] . '</p>'
-                . '<p>' . $donnees['techno'] . '</p>'
+                . '<div class="text"><p>' . $donnee['projet'] . '</p>'
+                . '<p>' . $donnee['descript'] . '</p>'
+                . '<p>' . $donnee['techno'] . '</p>'
                 . '</div>'
                 . '</div>'
                 . '</a>'
                 . '</div>';
-            return $html;
+            
         }
+        echo ($html);
 
         $reponse->closeCursor();
 

@@ -18,13 +18,48 @@
          url("font/Rubik-MediumItalic.ttf") format("truetype"),
 } 
 
+@-moz-keyframes anim 
+{
+    0%  {opacity:0;}
+    100% {opacity:1;}
+}
+@-webkit-keyframes anim 
+{
+    0%  {opacity:0;}
+    100% {opacity:1;}
+}
+@-o-keyframes anim 
+{
+    0%  {opacity:0;}
+    100% {opacity:1;}
+}
+@-ms-keyframes anim 
+{
+    0%  {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes anim 
+{
+    0%  {opacity:0;}
+    100% {opacity:1;}
+}
+
 body 
 {
     margin: 0;
     padding: 0;
     background-color: rgb(88, 88, 88);
     font-family: "Rubik";
-      
+    transition: .25s ease;
+}
+
+header
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .title 
@@ -35,8 +70,47 @@ body
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+    transition: .5s ease;
 }
+
+.logo
+{
+    width: 10%;
+    opacity:0;
+    -moz-animation: anim 2s linear forwards 1.5s;
+    -webkit-animation: anim 2s linear forwards 1.5s;
+    -o-animation: anim 2s linear forwards 1.5s;
+    -ms-animation: anim 2s linear forwards 1.5s;
+    animation: anim 2s linear forwards 1.5s;
+}
+
+.down
+{
+    width: 25px;
+    justify-self: end;
+    opacity:0;
+    -moz-animation: anim 2s linear forwards 2s;
+    -webkit-animation: anim 2s linear forwards 2s;
+    -o-animation: anim 2s linear forwards 2s;
+    -ms-animation: anim 2s linear forwards 2s;
+    animation: anim 2s linear forwards 2s;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+.welcome, .welcome1
+{
+    opacity:0;
+    -moz-animation: anim 2s linear forwards 0.75s;
+    -webkit-animation: anim 2s linear forwards 0.75s;
+    -o-animation: anim 2s linear forwards 0.75s;
+    -ms-animation: anim 2s linear forwards 0.75s;
+    animation: anim 2s linear forwards 0.75s;
+}
+
 
 .welcome 
 {
@@ -59,7 +133,8 @@ body
 main
 {
     height: 100vh;
-    background-color: rgb(196, 196, 196)
+    background-color: rgb(196, 196, 196);
+    transition: .25s ease;
 }
 
 .container {

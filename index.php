@@ -21,11 +21,19 @@ $connect = $insert->connect();
         <h1 class="welcome1">Hello I’m Alexis and this is my</h1>
         <h1 class="welcome">PORTFOLIO</h1>
         </div>
+        <div class="logo">
+            <img src="img/logoblason.png" alt="logo">
+        </div>
+        <a class="down" href="#main">
+            <img src="img/angle-down.svg" alt="">
+    </a>
     </header>
-    <main>
+    <main id="main">
         <?php
-            $extract = $insert->extract();
+        $extract = $insert->extract();
         ?>
     </main>
+    <script src="js/jquery.js" ></script>
+    <script src="js/ancre.js" ></script>   
 </body>
 </html>
