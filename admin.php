@@ -1,3 +1,8 @@
+<?php
+        //include ('morceau/secur.php');
+    require_once('morceau/bdd.php');
+    require_once('morceau/files.php');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,12 +14,6 @@
     <title>Administration</title>
 </head>
 <body>
-    <?php
-        //include ('morceau/secur.php');
-    require_once('morceau/bdd.php');
-    require_once('morceau/files.php');
-
-    ?>
     <div id="formu">
         <form action="admin.php" method="post" enctype="multipart/form-data">
             <label for="titre">Projet</label>
@@ -38,9 +37,9 @@
     <?php
 
     //connect and send to the bdd
-         $connect = $insert->connect();
-         $info = $insert->info();
-         $inserinfo = $insert->insert();
+    $connect = $insert->connect();
+    $info = $insert->info();
+    $inserinfo = $insert->insert();
     ?>
         <div class="error">
         <?php

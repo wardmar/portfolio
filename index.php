@@ -1,3 +1,7 @@
+<?php
+require_once('morceau/bdd.php');
+$connect = $insert->connect();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,6 +13,19 @@
     <title>Portfolio</title>
 </head>
 <body>
-    
+    <header>
+        <div class="menu">
+            <nav></nav>
+        </div>
+        <div class="title">
+        <h1 class="welcome1">Hello I’m Alexis and this is my</h1>
+        <h1 class="welcome">PORTFOLIO</h1>
+        </div>
+    </header>
+    <main>
+        <?php
+            $extract = $insert->extract();
+        ?>
+    </main>
 </body>
 </html>

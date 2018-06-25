@@ -26,7 +26,7 @@ class bdd
             'imageP' => $_POST['image'],
             'mockup' => $_POST['mockup'],
             'pagePrin' => $_POST['pagePrin']
-        );  
+        );
     }
     public function insert()
     {
@@ -36,6 +36,28 @@ class bdd
             VALUES(:titre, :dossier, :techno, :descript, :imageP, :mockup, :pagePrin)");
             $add->execute($this->_content);
         }
+    }
+    public function extract()
+    {
+        $reponse = $this->_mysqli->query('SELECT * FROM projet');
+
+        while ($donnees = $reponse->fetch()) {
+            $html = '<div class="container">'
+                . '<img src="projet/' . $donnees['dossier'] . '/' . $donnees['mockup'] . '" alt="Avatar" class="image">'
+                . '<a href="">'
+                . '<div class="overlay">'
+                . '<div class="text"><p>' . $donnees['projet'] . '</p>'
+                . '<p>' . $donnees['descript'] . '</p>'
+                . '<p>' . $donnees['techno'] . '</p>'
+                . '</div>'
+                . '</div>'
+                . '</a>'
+                . '</div>';
+            return $html;
+        }
+
+        $reponse->closeCursor();
+
     }
 }
 
