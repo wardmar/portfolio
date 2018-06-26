@@ -43,14 +43,14 @@ class bdd
         $reponse = $this->_mysqli->query('SELECT * FROM projet');
         foreach ($reponse as $donnee) {
             $html .= '<div class="container">'
+                . '<a href="admin.php" class="phonehid" >'
                 . '<img src="projet/' . $donnee['dossier'] . '/' . $donnee['mockup'] . '" alt="Avatar" class="image">'
-                . '<a href="">'
-                . '<div class="overlay">'
+                . '<a class="overlay"  href="admin.php">'
                 . '<div class="text"><p>' . $donnee['projet'] . '</p>'
-                . '<p>' . $donnee['descript'] . '</p>'
-                . '<p>' . $donnee['techno'] . '</p>'
+                . '<p class="mediahid" >' . $donnee['descript'] . '</p>'
+                . '<p class="mediahid" >' . $donnee['techno'] . '</p>'
                 . '</div>'
-                . '</div>'
+                . '</a>'
                 . '</a>'
                 . '</div>';
             

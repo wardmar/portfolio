@@ -13,10 +13,7 @@ $connect = $insert->connect();
     <title>Portfolio</title>
 </head>
 <body>
-    <header>
-        <div class="menu">
-            <nav></nav>
-        </div>
+    <header id="header">
         <div class="title">
         <h1 class="welcome1">Hello I’m Alexis and this is my</h1>
         <h1 class="welcome">PORTFOLIO</h1>
@@ -24,16 +21,18 @@ $connect = $insert->connect();
         <div class="logo">
             <img src="img/logoblason.png" alt="logo">
         </div>
-        <a class="down" href="#main">
-            <img src="img/angle-down.svg" alt="">
-    </a>
     </header>
+    <div class="fleche">
+    <div  class="down">
+        <img src="img/angle-down.svg" alt="">
+    </div>
+    </div>
     <main id="main">
         <?php
         $extract = $insert->extract();
         ?>
     </main>
     <script src="js/jquery.js" ></script>
-    <script src="js/ancre.js" ></script>   
+    <script src="js/script.js" ></script>   
 </body>
 </html>
