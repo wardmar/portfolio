@@ -16,7 +16,7 @@ $connect = $insert->connect();
     <header id="header">
         <div class="title">
         <h1 class="welcome1">Hello I’m Alexis and this is my</h1>
-        <h1 class="welcome">PORTFOLIO</h1>
+        <h1 class="welcome" >PORTFOLIO</h1>
         </div>
         <div class="logo">
             <img src="img/logoblason.png" alt="logo">

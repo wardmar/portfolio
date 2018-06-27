@@ -37,9 +37,9 @@
     <?php
 
     //connect and send to the bdd
-    // $connect = $insert->connect();
-    // $info = $insert->info();
-    // $inserinfo = $insert->insert();
+    $connect = $insert->connect();
+    $info = $insert->info();
+    $inserinfo = $insert->insert();
     ?>
         <div class="error">
         <?php

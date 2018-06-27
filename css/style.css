@@ -159,13 +159,14 @@ header.cache-menu div
 
 .container {
     position: relative;
-    width: 33%;
+    width: 33.33%;
     height: auto;
   }
 
   .project-flex
   {
       display: flex;
+      flex-wrap: wrap;
   }
   
   .image {
@@ -200,6 +201,12 @@ header.cache-menu div
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%
+  }
+
+  #projet-titre
+  {
+      font-size: 2em
   }
 
 
@@ -207,7 +214,6 @@ header.cache-menu div
 {
     .container
     {
-        all: inherit;
         width: 100%
     }
     .overlay 
