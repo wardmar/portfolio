@@ -9,15 +9,16 @@ class savefile
     public function fileSaving()
     {
         //put the information of FILES in an array in $_dossiercomp 
-        $this->_dossiercomp = $_FILES['dossier'];
+        $this->_dossiercomp = $_FILES['file'];
         if (isset($_POST["submit"])) {
-            if (move_uploaded_file(addslashes($this->_dossiercomp['tmp_name']), $this->_savepath.basename($this->_dossiercomp['name'])))
+            if (move_uploaded_file(addslashes($this->_dossiercomp['tmp_name']), $this->_savepath.$this->_dossiercomp['name']))
             //the function return true if the file as move correctly
             {
                 echo '<p>le fichier à correctement été enregister</p>';
             } else //else the function return false 
             {
                 echo '<p>impossible de deplacer le fichier</p>';
+                var_dump($this->_dossiercomp);
             }
         }
 

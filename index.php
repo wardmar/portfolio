@@ -28,9 +28,11 @@ $connect = $insert->connect();
     </div>
     </div>
     <main id="main">
-        <?php
-        $extract = $insert->extract();
-        ?>
+        <div class="project-flex">
+            <?php
+            $extract = $insert->extract();
+            ?>
+        </div>
     </main>
     <script src="js/jquery.js" ></script>
     <script src="js/script.js" ></script>   
