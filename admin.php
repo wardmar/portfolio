@@ -1,3 +1,8 @@
+<?php
+        //include ('morceau/secur.php');
+    require_once('morceau/bdd.php');
+    require_once('morceau/files.php');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,12 +14,6 @@
     <title>Administration</title>
 </head>
 <body>
-    <?php
-        //include ('morceau/secur.php');
-    require_once('morceau/bdd.php');
-    require_once('morceau/files.php');
-
-    ?>
     <div id="formu">
         <form action="admin.php" method="post" enctype="multipart/form-data">
             <label for="titre">Projet</label>
@@ -23,8 +22,8 @@
             <input type="text" name="techno" id="techno" placeholder="Les techno utiliser " required>
             <label for="description">Description</label>
             <textarea name="description" id="description" cols="2" rows="4" placeholder="Description du projet" required></textarea>
-            <label for="dossier">Dossier .zip</label>
-            <input type="file" name="dossier" id="dossier" >
+            <label for="doc">Dossier .zip</label>
+            <input type="file" name="file" id="file" >
             <label for="image">Image du projet *</label>
             <input type="text" name="image" id="image" placeholder="Lien vers l'image" required>
             <label for="mockup">Mockup du projet *</label>
@@ -38,12 +37,13 @@
     <?php
 
     //connect and send to the bdd
-        // $connect = $insert->connect();
-        // $info = $insert->info();
-        // $inserinfo = $insert->insert();
+    $connect = $insert->connect();
+    $info = $insert->info();
+    $inserinfo = $insert->insert();
     ?>
         <div class="error">
         <?php
+        //execute the saving and extracting function return message 
         $filesaving = $savezip->fileSaving();
         $fileextract = $savezip->extract();
         ?>

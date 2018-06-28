@@ -103,3 +103,26 @@ input[type=text]:focus , textarea:focus
 {
     color: red;
 }
+
+
+
+
+@media screen and (max-width: 600px)
+{
+    form
+    {
+        width: 100%;
+    }
+    #formu
+    {
+        margin-top: 0px
+    }
+    input[type=submit]
+    {
+        width: 50%;
+    }
+    input[type=file] 
+    {
+        width: 40%;
+    }
+}
