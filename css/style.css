@@ -206,7 +206,8 @@ header.cache-menu div
 
   #projet-titre
   {
-      font-size: 2em
+      font-size: 2em;
+      margin-top: 0;
   }
 
 
