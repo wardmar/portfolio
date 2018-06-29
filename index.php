@@ -1,6 +1,5 @@
 <?php
 require_once('morceau/bdd.php');
-$connect = $insert->connect();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,7 +23,7 @@ $connect = $insert->connect();
     </header>
     <div class="fleche">
     <div  class="down">
-        <img src="img/angle-down.svg" alt="">
+        <img src="img/angle-down.svg" id="butroll" alt="button">
     </div>
     </div>
     <main id="main">

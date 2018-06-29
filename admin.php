@@ -1,7 +1,7 @@
 <?php
         //include ('morceau/secur.php');
-    require_once('morceau/bdd.php');
-    require_once('morceau/files.php');
+require_once('morceau/bdd.php');
+require_once('morceau/files.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,6 +18,8 @@
         <form action="admin.php" method="post" enctype="multipart/form-data">
             <label for="titre">Projet</label>
             <input type="text" name="titre" id="titre" placeholder="Le nom du projet" required>
+            <label for="titre">Dossier</label>
+            <input type="text" name="doss" id="doss" placeholder="Le nom du dossiert" required>
             <label for="techno">Techno</label>
             <input type="text" name="techno" id="techno" placeholder="Les techno utiliser " required>
             <label for="description">Description</label>
@@ -30,6 +32,17 @@
             <input type="text" name="mockup" id="mockup" placeholder="Lien vers le mockup" required>
             <label for="pagePrin">Page principal du projet</label>
             <input type="text" name="pagePrin" id="pagePrin" placeholder="Lien vers la page principal" required>
+            <label for="resp">Le projet est'il responsive</label>
+            <span class="radio">
+                <span>
+            <p>Non</p>
+            <input type="radio" name="resp" id="non" value="NULL">
+        </span>
+        <span>
+            <p>Oui</p>
+            <input type="radio" name="resp" id="yes" value="YES">
+        </span>
+        </span>
             <p id="warning" >*les images et Mockups doivent ètre placés à la racine du dossier compressé</p>
             <input type="submit" value="Submit" name="submit">
         </form>
@@ -37,7 +50,6 @@
     <?php
 
     //connect and send to the bdd
-    $connect = $insert->connect();
     $info = $insert->info();
     $inserinfo = $insert->insert();
     ?>
@@ -48,5 +60,7 @@
         $fileextract = $savezip->extract();
         ?>
     </div>
+
+    
 </body>
 </html>

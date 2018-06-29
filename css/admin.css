@@ -104,6 +104,14 @@ input[type=text]:focus , textarea:focus
     color: red;
 }
 
+span
+{
+    display: flex;
+    align-items: center;
+    margin-right: 5%
+
+}
+
 
 
 

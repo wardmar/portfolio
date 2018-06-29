@@ -16,6 +16,7 @@
 //     });
 // });
 
-$('.down').on('click', function(e) {
+$('.down').click(function(e) {
     $('#header').toggleClass("cache-menu header");
+    $('#butroll').toggleClass("up");
 });

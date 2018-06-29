@@ -1,0 +1,27 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(88, 88, 88);
+}
+
+.screen-iframe
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+ 
+iframe
+{
+    margin-top: 10px;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    border: 50px solid black;
+    background-color: rgb(224, 224, 224);
+}
