@@ -18,13 +18,13 @@ require_once('morceau/files.php');
         <form action="admin.php" method="post" enctype="multipart/form-data">
             <label for="titre">Projet</label>
             <input type="text" name="titre" id="titre" placeholder="Le nom du projet" required>
-            <label for="titre">Dossier</label>
+            <label for="doss">Dossier</label>
             <input type="text" name="doss" id="doss" placeholder="Le nom du dossiert" required>
             <label for="techno">Techno</label>
             <input type="text" name="techno" id="techno" placeholder="Les techno utiliser " required>
             <label for="description">Description</label>
             <textarea name="description" id="description" cols="2" rows="4" placeholder="Description du projet" required></textarea>
-            <label for="doc">Dossier .zip</label>
+            <label for="file">Dossier .zip</label>
             <input type="file" name="file" id="file" >
             <label for="image">Image du projet *</label>
             <input type="text" name="image" id="image" placeholder="Lien vers l'image" required>
@@ -40,7 +40,7 @@ require_once('morceau/files.php');
         </span>
         <span>
             <p>Oui</p>
-            <input type="radio" name="resp" id="yes" value="YES">
+            <input type="radio" name="resp" id="yes" value="yes">
         </span>
         </span>
             <p id="warning" >*les images et Mockups doivent ètre placés à la racine du dossier compressé</p>

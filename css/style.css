@@ -221,6 +221,15 @@ header.cache-menu div
   }
 
 
+  @media screen and (max-width: 1500px)
+  {
+      .container
+      {
+          width: 50%
+      }
+  
+  }
+
 @media screen and (max-width: 900px)
 {
     .container
@@ -289,3 +298,4 @@ header.cache-menu div
         height: auto;
     }
 }
+

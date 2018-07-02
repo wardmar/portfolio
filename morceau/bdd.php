@@ -35,8 +35,8 @@ class bdd
         $this->connect();
         //insert to the bdd the information of the info function
         if (isset($_POST["submit"])) {
-            $add = $this->_mysqli->prepare("INSERT INTO projet(projet, dossier, techno, descript, imageP, mockup, pagePrin, respnsive) 
-            VALUES(:titre, :dossier, :techno, :descript, :imageP, :mockup, :pagePrin, :respnsive)");
+            $add = $this->_mysqli->prepare("INSERT INTO projet(projet, dossier, techno, descript, imageP, mockup, pagePrin, responsive) 
+            VALUES(:titre, :dossier, :techno, :descript, :imageP, :mockup, :pagePrin, :responsive)");
             $add->execute($this->_content);
         }
     }
@@ -78,6 +78,23 @@ class bdd
                 $html .= '<div class="screen-iframe">'
                 .'<iframe src="projet/'.$val['dossier'].'/'.$val['pagePrin'].'" frameborder="0"></iframe>'
                 .'</div>';
+            }
+            else
+            {
+                $html .= '<div class="container">'
+                .'<h1>Responsive</h1>'
+                .'<label class="switch" for="checkbox">'
+                .'<input type="checkbox" id="checkbox" />'
+                .'<div class="slider round"></div>'
+                .'</label>'
+                .'</div>'
+                .'</label>'
+                .'</div>'
+                .'<div class="screen-iframe">'
+                .'<iframe id="ifram" src="projet/'.$val['dossier'].'/'.$val['pagePrin'].'" frameborder="0"></iframe>'
+                .'</div>'
+                ;
+
             }
         }
         echo($html);

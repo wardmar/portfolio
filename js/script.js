@@ -20,3 +20,7 @@ $('.down').click(function(e) {
     $('#header').toggleClass("cache-menu header");
     $('#butroll').toggleClass("up");
 });
+
+$('#checkbox').click(function(e) {
+    $('#ifram').toggleClass("respo");
+});

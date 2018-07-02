@@ -1,19 +1,38 @@
+@font-face 
+{
+    font-family: "Archery";
+    src: url("font/SF_Archery_Black.ttf");
+    scr: url("font/SF_Archery_Black_Oblique.ttf") ;     
+}  
+@font-face 
+{
+    font-family: "Rubik";
+    src: url("font/Rubik-Regular.ttf") format("truetype");
+    scr: url("font/Rubik-Black.ttf") format("truetype"),
+         url("font/Rubik-Bold.ttf") format("truetype"),
+         url("font/Rubik-Bolditalic.ttf") format("truetype"),
+         url("font/Rubik-Italic.ttf") format("truetype"),
+         url("font/Rubik-Light.ttf") format("truetype"),
+         url("font/Rubik-LightItalic.ttf") format("truetype"),
+         url("font/Rubik-Medium.ttf") format("truetype"),
+         url("font/Rubik-MediumItalic.ttf") format("truetype"),
+} 
+
 body
 {
-    display: flex;
-    justify-content: center;
     padding: 0;
     margin: 0;
+    font-family: Rubik;
     background-color: rgb(88, 88, 88);
 }
 
 .screen-iframe
 {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
  
 iframe
@@ -21,7 +40,77 @@ iframe
     margin-top: 10px;
     width: 80%;
     height: 80%;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 50px solid black;
     background-color: rgb(224, 224, 224);
+    transition: .5s ease;
+}
+
+.respo
+{
+    margin-top: 10px;
+    width: 360px;
+    height: 80%;
+    border-radius: 20px;
+    border: 50px solid black;
+    background-color: rgb(224, 224, 224);
+}
+
+.container
+{
+  width: 100vw;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

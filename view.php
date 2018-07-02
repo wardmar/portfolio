@@ -17,5 +17,8 @@ require_once ('morceau/bdd.php');
 <?php
     $proj = $insert->viewproj()
 ?>
+
+<script src="js/jquery.js" ></script>
+<script src="js/script.js" ></script>
 </body>
 </html>
