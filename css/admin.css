@@ -47,7 +47,7 @@ form
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 100px
+    margin-top: 50px
 }
 
 input[type=submit]
@@ -104,8 +104,13 @@ input[type=text]:focus , textarea:focus
     color: red;
 }
 
+span
+{
+    display: flex;
+    align-items: center;
+    margin-right: 5%
 
-
+}
 
 @media screen and (max-width: 600px)
 {

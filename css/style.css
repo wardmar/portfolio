@@ -48,7 +48,7 @@ body
 {
     margin: 0;
     padding: 0;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(196, 196, 196);
     font-family: "Rubik";
     transition: .25s ease;
 }
@@ -61,6 +61,7 @@ header
     justify-content: space-around;
     align-items: center;
     transition: height 1s;
+    background-color: rgb(88, 88, 88);
 }
 
 .title 
@@ -87,22 +88,28 @@ header
 
 .fleche
 {
+    background-color: rgb(88, 88, 88);
     display: flex;
     justify-content: center;
     align-items: flex-end;
     height: 5vh;
-    opacity:0;
-    -moz-animation: anim 2s linear forwards 2s;
-    -webkit-animation: anim 2s linear forwards 2s;
-    -o-animation: anim 2s linear forwards 2s;
-    -ms-animation: anim 2s linear forwards 2s;
-    animation: anim 2s linear forwards 2s;
 }
 
 .down
 {
     width: 30px;
     margin-top: 10px;
+}
+
+#butroll
+{
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.up
+{
+    transform: scale(1, -1);
 }
 
 img
@@ -157,12 +164,6 @@ header.cache-menu div
     transition: 1s
 }
 
-.container {
-    position: relative;
-    width: 33.33%;
-    height: auto;
-  }
-
   .project-flex
   {
       display: flex;
@@ -175,6 +176,12 @@ header.cache-menu div
     height: auto;
   }
   
+  .container {
+    position: relative;
+    width: 33.33%;
+    height: auto;
+  }
+  
   .overlay {
     position: absolute;
     top: 0;
@@ -184,8 +191,8 @@ header.cache-menu div
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
+    transition: .3s ease;
+    background-color: #66bb6a;
   }
   
   .container:hover .overlay {
@@ -210,6 +217,15 @@ header.cache-menu div
       margin-top: 0;
   }
 
+
+  @media screen and (max-width: 1500px)
+  {
+      .container
+      {
+          width: 50%
+      }
+  
+  }
 
 @media screen and (max-width: 900px)
 {
