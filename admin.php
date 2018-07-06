@@ -1,5 +1,5 @@
 <?php
-        //include ('morceau/secur.php');
+//require all the part for the saving
 require_once('morceau/bdd.php');
 require_once('morceau/files.php');
 ?>
@@ -26,8 +26,6 @@ require_once('morceau/files.php');
             <textarea name="description" id="description" cols="2" rows="4" placeholder="Description du projet" required></textarea>
             <label for="file">Dossier .zip</label>
             <input type="file" name="file" id="file" >
-            <label for="image">Image du projet *</label>
-            <input type="text" name="image" id="image" placeholder="Lien vers l'image" required>
             <label for="mockup">Mockup du projet *</label>
             <input type="text" name="mockup" id="mockup" placeholder="Lien vers le mockup" required>
             <label for="pagePrin">Page principal du projet</label>
@@ -48,7 +46,6 @@ require_once('morceau/files.php');
         </form>
     </div>
     <?php
-
     //connect and send to the bdd
     $info = $insert->info();
     $inserinfo = $insert->insert();
@@ -60,7 +57,5 @@ require_once('morceau/files.php');
         $fileextract = $savezip->extract();
         ?>
     </div>
-
-    
 </body>
 </html>

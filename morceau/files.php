@@ -43,12 +43,6 @@ class savefile
             }
         }
     }
-
-    
-
-    
 }
-
 $savezip = new savefile;
-
 ?>

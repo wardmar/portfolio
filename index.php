@@ -29,6 +29,7 @@ require_once('morceau/bdd.php');
     <main id="main">
         <div class="project-flex">
             <?php
+            //access to the database and show the projects
             $extract = $insert->extract();
             ?>
         </div>
